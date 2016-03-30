@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<script>
+function getIframeValue(){
+	//获取子iframe中的元素值
+	var x = document.getElementById('ifr').contentWindow;
+	var y = x.document.getElementById("input");
+	alert(y.value);
+}
+</script>
+</head>
+<body>
+<form action="">
+	<iframe id="ifr" name="ifr" src="iframe.html" frameborder="0"></iframe>
+	<input type="submit" onclick="getIframeValue()">
+</form>
+</body>
+</html>
